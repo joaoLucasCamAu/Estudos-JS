@@ -1,0 +1,25 @@
+{
+  "name": "estudojs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Escopo.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "calc.MediaRUN": "node Nivel-1-Fundamentos-e-tipos-de-dados/calcula-media-de-consumo.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joaoLucasCamAu/Estudos-JS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joaoLucasCamAu/Estudos-JS/issues"
+  },
+  "homepage": "https://github.com/joaoLucasCamAu/Estudos-JS#readme",
+  "dependencies": {
+    "chalk": "^6.0.0"
+  }
+}
