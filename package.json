@@ -7,7 +7,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "calc.MediaRUN": "node Nivel-1-Fundamentos-e-tipos-de-dados/calcula-media-de-consumo.js",
-    "Nivel2":"node Nivel-2-EstruturasCondicionais/simuladore-parquimetro.js"
+    "Nivel2":"node Nivel-2-EstruturasCondicionais/simuladore-parquimetro.js",
+    "Nivel3": "node Nivel-3-Estruturas-de-Repetição/geradorDeEstrela.js"
   },
   "repository": {
     "type": "git",

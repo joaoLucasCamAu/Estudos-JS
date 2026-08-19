@@ -1,0 +1,270 @@
+Sistema de Gestão de Veículos
+
+Você foi contratado para desenvolver um pequeno sistema de terminal para uma empresa de aluguel de veículos.
+
+O programa deverá trabalhar com um único veículo por execução.
+
+1. Dados iniciais
+
+Crie variáveis para representar:
+
+modelo do carro
+região onde o carro será utilizado
+distância percorrida
+quantidade de litros consumidos
+velocidade permitida
+velocidade registrada
+valor disponível para pagamento
+
+Exemplo de dados:
+
+Modelo: Camaro
+Região: Sul
+Distância: 450 km
+Litros consumidos: 45 L
+Velocidade permitida: 80 km/h
+Velocidade registrada: 97 km/h
+Valor disponível: R$ 100,00
+
+Não copie esses valores obrigatoriamente. Escolha seus próprios valores para testar diferentes situações.
+
+2. Consumo do veículo
+
+Calcule quantos quilômetros o veículo percorreu por litro.
+
+Fórmula:
+
+kmPorLitro = distancia / litros
+
+Exiba algo semelhante a:
+
+========== VEÍCULO ==========
+Modelo: Camaro
+Distância: 450 km
+Consumo: 10.00 km/L
+
+Utilize .toFixed(2).
+
+3. Classificação do consumo
+
+Agora utilize if / else if / else para classificar a eficiência do veículo.
+
+Regras:
+
+Acima de 12 km/L  → Excelente
+Entre 8 e 12 km/L → Bom
+Entre 5 e 8 km/L  → Regular
+Abaixo de 5 km/L  → Alto consumo
+
+Exemplo:
+
+Consumo: 10.00 km/L
+Classificação: BOM
+
+Aqui você deverá utilizar operadores relacionais e lógicos.
+
+4. Região e taxa de entrega
+
+Utilize switch / case.
+
+Regras:
+
+Sudeste → R$ 10,00
+Sul     → R$ 15,00
+Norte   → R$ 25,00
+Outras  → R$ 30,00
+
+O resultado deve ser exibido no terminal.
+
+Atenção: tente fazer seu programa aceitar a região exatamente como você definiu nas variáveis. Depois, como desafio extra, tente fazer "sul", "Sul" e "SUL" funcionarem.
+
+5. Multa por velocidade
+
+Utilize a lógica do exercício que você já fez.
+
+Regras:
+
+Velocidade registrada <= permitida
+→ Sem multa
+
+
+Até 20% acima da permitida
+→ Multa Leve
+
+
+Mais de 20% acima
+→ Multa Grave
+
+Por exemplo:
+
+Velocidade permitida: 80 km/h
+Velocidade registrada: 97 km/h
+
+
+20% de 80 = 16
+
+
+Limite para multa leve = 96 km/h
+
+
+97 > 96
+
+
+Resultado: MULTA GRAVE
+6. Sistema de pagamento
+
+Agora utilize o valor disponível pelo cliente.
+
+Crie uma taxa de aluguel fictícia:
+
+Carro econômico → R$ 80
+Carro intermediário → R$ 120
+Carro esportivo → R$ 200
+
+Você pode decidir como identificar cada categoria.
+
+Depois compare:
+
+valorDisponivel >= valorAluguel
+
+Se tiver dinheiro suficiente:
+
+Pagamento aprovado
+Troco: R$ XX,XX
+
+Caso contrário:
+
+Pagamento recusado
+Saldo insuficiente
+
+Aqui quero que você utilize o operador ternário pelo menos uma vez.
+
+7. Sistema de combustível
+
+Agora vem uma parte interessante.
+
+Considere:
+
+Tanque = 45 litros
+
+Calcule quantos litros foram consumidos e quanto ainda resta.
+
+Por exemplo:
+
+Tanque: 45 L
+Consumido: 30 L
+Restante: 15 L
+
+Depois classifique:
+
+Mais de 30 L restantes → Tanque cheio
+Entre 15 e 30 L        → Tanque médio
+Entre 1 e 15 L         → Combustível baixo
+0 L                    → Tanque vazio
+8. Relatório final
+
+No final, seu programa deverá produzir um relatório parecido com:
+
+========================================
+        SISTEMA DE VEÍCULOS
+========================================
+
+
+Modelo: Camaro
+Região: Sul
+
+
+---------- CONSUMO ----------
+Distância: 450 km
+Combustível consumido: 45 L
+Consumo: 10.00 km/L
+Classificação: BOM
+
+
+---------- COMBUSTÍVEL ----------
+Capacidade: 45 L
+Consumido: 45 L
+Restante: 0 L
+Status: TANQUE VAZIO
+
+
+---------- VELOCIDADE ----------
+Permitida: 80 km/h
+Registrada: 97 km/h
+Status: MULTA GRAVE
+
+
+---------- ENTREGA ----------
+Região: Sul
+Taxa: R$ 15.00
+
+
+---------- PAGAMENTO ----------
+Valor disponível: R$ 100.00
+Valor da taxa: R$ 15.00
+Status: PAGAMENTO APROVADO
+Troco: R$ 85.00
+
+
+========================================
+
+Não precisa ficar exatamente igual. A lógica é o mais importante.
+
+Regras do desafio
+
+Para realmente testar seu conhecimento, tente fazer sem pesquisar a solução.
+
+Você deve obrigatoriamente utilizar:
+
+Conceito	Onde utilizar
+const / let	Dados do veículo
+Operações matemáticas	Consumo, combustível e pagamento
+Template literals	Relatórios
+.toFixed(2)	Valores monetários e consumo
+if / else if / else	Classificações
+&&	Faixas de valores
+`	
+switch	Região
+Operador ternário	Pagamento
+for	Relatório extra
+.repeat()	Relatório visual
+chalk	Interface do terminal
+O for tem uma missão específica
+
+No final do programa, faça uma pequena escala de consumo:
+
+Consumo do veículo
+
+
+1 km → ...
+2 km → ...
+3 km → ...
+...
+10 km → ...
+
+Ou, se quiser algo mais interessante:
+
+Combustível restante
+
+
+[████████████████████] 45 L
+[████████████████    ] 36 L
+[████████████        ] 27 L
+[████████            ] 18 L
+[████                ] 9 L
+
+Você pode tentar construir isso usando for + .repeat().
+
+Nível 2 — depois que terminar
+
+Quando terminar o desafio sem olhar uma solução, faça uma segunda versão com estas restrições:
+
+Não pode repetir código desnecessariamente.
+Os nomes das variáveis devem ser claros.
+Nenhuma variável deve ter nome genérico como value1, value2, x, y.
+Use const sempre que o valor não precisar ser alterado.
+Separe mentalmente o programa em etapas:
+entrada
+processamento
+decisões
+saída
